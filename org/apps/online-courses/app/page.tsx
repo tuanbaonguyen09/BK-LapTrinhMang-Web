@@ -1,5 +1,6 @@
 'use client';
 
+import Script from 'next/script';
 import styled from 'styled-components';
 
 const StyledPage = styled.div`
@@ -15,409 +16,633 @@ export default async function Index() {
    */
   return (
     <StyledPage>
-      <div className="wrapper">
-        <div className="container">
-          <div id="welcome">
-            <h1>
-              <span> Hello there, </span>
-              Welcome online-courses 👋
-            </h1>
+      {/*  */}
+      {/* <div id="preloader">
+        <div className="spinner"></div>
+      </div> */}
+
+      {/*  */}
+      <header className="header-area">
+
+        {/*  */}
+        <div className="top-header-area d-flex justify-content-between align-items-center">
+          {/*  */}
+          <div className="contact-info">
+            <a href="#"><span>Phone:</span> +44 300 303 0266</a>
+            <a href="#"><span>Email:</span> info@clever.com</a>
           </div>
 
-          <div id="hero" className="rounded">
-            <div className="text-container">
-              <h2>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                  />
-                </svg>
-                <span>You&apos;re up and running</span>
-              </h2>
-              <a href="#commands"> What&apos;s next? </a>
-            </div>
-            <div className="logo-container">
-              <svg
-                fill="currentColor"
-                role="img"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M11.987 14.138l-3.132 4.923-5.193-8.427-.012 8.822H0V4.544h3.691l5.247 8.833.005-3.998 3.044 4.759zm.601-5.761c.024-.048 0-3.784.008-3.833h-3.65c.002.059-.005 3.776-.003 3.833h3.645zm5.634 4.134a2.061 2.061 0 0 0-1.969 1.336 1.963 1.963 0 0 1 2.343-.739c.396.161.917.422 1.33.283a2.1 2.1 0 0 0-1.704-.88zm3.39 1.061c-.375-.13-.8-.277-1.109-.681-.06-.08-.116-.17-.176-.265a2.143 2.143 0 0 0-.533-.642c-.294-.216-.68-.322-1.18-.322a2.482 2.482 0 0 0-2.294 1.536 2.325 2.325 0 0 1 4.002.388.75.75 0 0 0 .836.334c.493-.105.46.36 1.203.518v-.133c-.003-.446-.246-.55-.75-.733zm2.024 1.266a.723.723 0 0 0 .347-.638c-.01-2.957-2.41-5.487-5.37-5.487a5.364 5.364 0 0 0-4.487 2.418c-.01-.026-1.522-2.39-1.538-2.418H8.943l3.463 5.423-3.379 5.32h3.54l1.54-2.366 1.568 2.366h3.541l-3.21-5.052a.7.7 0 0 1-.084-.32 2.69 2.69 0 0 1 2.69-2.691h.001c1.488 0 1.736.89 2.057 1.308.634.826 1.9.464 1.9 1.541a.707.707 0 0 0 1.066.596zm.35.133c-.173.372-.56.338-.755.639-.176.271.114.412.114.412s.337.156.538-.311c.104-.231.14-.488.103-.74z" />
-              </svg>
-            </div>
+          <div className="follow-us">
+            <span>Follow us</span>
+            <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
           </div>
-
-          <div id="middle-content">
-            <div id="learning-materials" className="rounded shadow">
-              <h2>Learning materials</h2>
-              <a
-                href="https://nx.dev/getting-started/intro?utm_source=nx-project"
-                target="_blank"
-                rel="noreferrer"
-                className="list-item-link"
-              >
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  />
-                </svg>
-                <span>
-                  Documentation
-                  <span> Everything is in there </span>
-                </span>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://blog.nrwl.io/?utm_source=nx-project"
-                target="_blank"
-                rel="noreferrer"
-                className="list-item-link"
-              >
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                  />
-                </svg>
-                <span>
-                  Blog
-                  <span> Changelog, features & events </span>
-                </span>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.youtube.com/@NxDevtools/videos?utm_source=nx-project&sub_confirmation=1"
-                target="_blank"
-                rel="noreferrer"
-                className="list-item-link"
-              >
-                <svg
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>YouTube</title>
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-                <span>
-                  YouTube channel
-                  <span> Nx Show, talks & tutorials </span>
-                </span>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://nx.dev/react-tutorial/1-code-generation?utm_source=nx-project"
-                target="_blank"
-                rel="noreferrer"
-                className="list-item-link"
-              >
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                  />
-                </svg>
-                <span>
-                  Interactive tutorials
-                  <span> Create an app, step-by-step </span>
-                </span>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://nxplaybook.com/?utm_source=nx-project"
-                target="_blank"
-                rel="noreferrer"
-                className="list-item-link"
-              >
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  />
-                </svg>
-                <span>
-                  Video courses
-                  <span> Nx custom courses </span>
-                </span>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            </div>
-            <div id="other-links">
-              <a
-                id="nx-console"
-                className="button-pill rounded shadow"
-                href="https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console&utm_source=nx-project"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  fill="currentColor"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Visual Studio Code</title>
-                  <path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" />
-                </svg>
-                <span>
-                  Install Nx Console
-                  <span>Plugin for VSCode</span>
-                </span>
-              </a>
-              <div id="nx-cloud" className="rounded shadow">
-                <div>
-                  <svg
-                    id="nx-cloud-logo"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke="currentColor"
-                    fill="transparent"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeWidth="2"
-                      d="M23 3.75V6.5c-3.036 0-5.5 2.464-5.5 5.5s-2.464 5.5-5.5 5.5-5.5 2.464-5.5 5.5H3.75C2.232 23 1 21.768 1 20.25V3.75C1 2.232 2.232 1 3.75 1h16.5C21.768 1 23 2.232 23 3.75Z"
-                    />
-                    <path
-                      strokeWidth="2"
-                      d="M23 6v14.1667C23 21.7307 21.7307 23 20.1667 23H6c0-3.128 2.53867-5.6667 5.6667-5.6667 3.128 0 5.6666-2.5386 5.6666-5.6666C17.3333 8.53867 19.872 6 23 6Z"
-                    />
-                  </svg>
-                  <h2>
-                    NxCloud
-                    <span>Enable faster CI & better DX</span>
-                  </h2>
-                </div>
-                <p>
-                  You can activate distributed tasks executions and caching by
-                  running:
-                </p>
-                <pre>nx connect-to-nx-cloud</pre>
-                <a
-                  href="https://nx.app/?utm_source=nx-project"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {' '}
-                  What is Nx Cloud?{' '}
-                </a>
-              </div>
-              <a
-                id="nx-repo"
-                className="button-pill rounded shadow"
-                href="https://github.com/nrwl/nx?utm_source=nx-project"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  fill="currentColor"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                </svg>
-                <span>
-                  Nx is open source
-                  <span> Love Nx? Give us a star! </span>
-                </span>
-              </a>
-            </div>
-          </div>
-
-          <div id="commands" className="rounded shadow">
-            <h2>Next steps</h2>
-            <p>Here are some things you can do with Nx:</p>
-            <details>
-              <summary>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                Add UI library
-              </summary>
-              <pre>
-                <span># Generate UI lib</span>
-                nx g @nx/next:library ui
-                <span># Add a component</span>
-                nx g @nx/next:component button --project=ui
-              </pre>
-            </details>
-            <details>
-              <summary>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                View interactive project graph
-              </summary>
-              <pre>nx graph</pre>
-            </details>
-            <details>
-              <summary>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                Run affected commands
-              </summary>
-              <pre>
-                <span># see what&apos;s been affected by changes</span>
-                nx affected:graph
-                <span># run tests for current changes</span>
-                nx affected:test
-                <span># run e2e tests for current changes</span>
-                nx affected:e2e
-              </pre>
-            </details>
-          </div>
-
-          <p id="love">
-            Carefully crafted with
-            <svg
-              fill="currentColor"
-              stroke="none"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
-          </p>
         </div>
-      </div>
+
+
+        <div className="clever-main-menu">
+          <div className="classy-nav-container breakpoint-off">
+
+            <nav className="classy-navbar justify-content-between" id="cleverNav">
+
+
+              <a className="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt="" /></a>
+
+
+              <div className="classy-navbar-toggler">
+                <span className="navbarToggler"><span></span><span></span><span></span></span>
+              </div>
+
+
+              <div className="classy-menu">
+
+
+                <div className="classycloseIcon">
+                  <div className="cross-wrap"><span className="top"></span><span className="bottom"></span></div>
+                </div>
+
+
+                <div className="classynav">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Pages</a>
+                      <ul className="dropdown">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="single-course.html">Single Courses</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="blog-details.html">Single Blog</a></li>
+                        <li><a href="regular-page.html">Regular Page</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="instructors.html">Instructors</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+
+
+                  <div className="search-area">
+                    <form action="#" method="post">
+                      <input type="search" name="search" id="search" placeholder="Search" />
+                      <button type="submit"><i className="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                  </div>
+
+
+                  <div className="register-login-area">
+                    <a href="#" className="btn">Register</a>
+                    <a href="index-login.html" className="btn active">Login</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+
+      <section className="hero-area bg-img bg-overlay-2by5"
+      // style="background-image: url(img/bg-img/bg1.jpg);"
+      >
+        <div className="container h-100">
+          <div className="row h-100 align-items-center">
+            <div className="col-12">
+
+              <div className="hero-content text-center">
+                <h2>{`Let's Study Together`}</h2>
+                <a href="#" className="btn clever-btn">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="cool-facts-area section-padding-100-0">
+        <div className="container">
+          <div className="row">
+
+            <div className="col-12 col-sm-6 col-lg-3">
+              <div className="single-cool-facts-area text-center mb-100 wow fadeInUp" data-wow-delay="250ms">
+                <div className="icon">
+                  <img src="img/core-img/docs.png" alt="" />
+                </div>
+                <h2><span className="counter">1912</span></h2>
+                <h5>Success Stories</h5>
+              </div>
+            </div>
+
+
+            <div className="col-12 col-sm-6 col-lg-3">
+              <div className="single-cool-facts-area text-center mb-100 wow fadeInUp" data-wow-delay="500ms">
+                <div className="icon">
+                  <img src="img/core-img/star.png" alt="" />
+                </div>
+                <h2><span className="counter">123</span></h2>
+                <h5>Dedicated Tutors</h5>
+              </div>
+            </div>
+
+
+            <div className="col-12 col-sm-6 col-lg-3">
+              <div className="single-cool-facts-area text-center mb-100 wow fadeInUp" data-wow-delay="750ms">
+                <div className="icon">
+                  <img src="img/core-img/events.png" alt="" />
+                </div>
+                <h2><span className="counter">89</span></h2>
+                <h5>Scheduled Events</h5>
+              </div>
+            </div>
+
+
+            <div className="col-12 col-sm-6 col-lg-3">
+              <div className="single-cool-facts-area text-center mb-100 wow fadeInUp" data-wow-delay="1000ms">
+                <div className="icon">
+                  <img src="img/core-img/earth.png" alt="" />
+                </div>
+                <h2><span className="counter">56</span></h2>
+                <h5>Available Courses</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="popular-courses-area section-padding-100-0"
+      // style="background-image: url(img/core-img/texture.png);"
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-heading">
+                <h3>Popular Online Courses</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
+                <img src="img/bg-img/c1.jpg" alt="" />
+
+                <div className="course-content">
+                  <h4>English Grammar</h4>
+                  <div className="meta d-flex align-items-center">
+                    <a href="#">Sarah Parker</a>
+                    <span><i className="fa fa-circle" aria-hidden="true"></i></span>
+                    <a href="#">Art &amp; Design</a>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
+                </div>
+
+                <div className="seat-rating-fee d-flex justify-content-between">
+                  <div className="seat-rating h-100 d-flex align-items-center">
+                    <div className="seat">
+                      <i className="fa fa-user" aria-hidden="true"></i> 10
+                    </div>
+                    <div className="rating">
+                      <i className="fa fa-star" aria-hidden="true"></i> 4.5
+                    </div>
+                  </div>
+                  <div className="course-fee h-100">
+                    <a href="#" className="free">Free</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="single-popular-course mb-100 wow fadeInUp" data-wow-delay="500ms">
+                <img src="img/bg-img/c2.jpg" alt="" />
+
+                <div className="course-content">
+                  <h4>Vocabulary</h4>
+                  <div className="meta d-flex align-items-center">
+                    <a href="#">Sarah Parker</a>
+                    <span><i className="fa fa-circle" aria-hidden="true"></i></span>
+                    <a href="#">Art &amp; Design</a>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
+                </div>
+
+                <div className="seat-rating-fee d-flex justify-content-between">
+                  <div className="seat-rating h-100 d-flex align-items-center">
+                    <div className="seat">
+                      <i className="fa fa-user" aria-hidden="true"></i> 10
+                    </div>
+                    <div className="rating">
+                      <i className="fa fa-star" aria-hidden="true"></i> 4.5
+                    </div>
+                  </div>
+                  <div className="course-fee h-100">
+                    <a href="#">$20</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="single-popular-course mb-100 wow fadeInUp" data-wow-delay="750ms">
+                <img src="img/bg-img/c3.jpg" alt="" />
+
+                <div className="course-content">
+                  <h4>Expository writing</h4>
+                  <div className="meta d-flex align-items-center">
+                    <a href="#">Sarah Parker</a>
+                    <span><i className="fa fa-circle" aria-hidden="true"></i></span>
+                    <a href="#">Art &amp; Design</a>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
+                </div>
+
+                <div className="seat-rating-fee d-flex justify-content-between">
+                  <div className="seat-rating h-100 d-flex align-items-center">
+                    <div className="seat">
+                      <i className="fa fa-user" aria-hidden="true"></i> 10
+                    </div>
+                    <div className="rating">
+                      <i className="fa fa-star" aria-hidden="true"></i> 4.5
+                    </div>
+                  </div>
+                  <div className="course-fee h-100">
+                    <a href="#">$45</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="best-tutors-area section-padding-100">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-heading">
+                <h3>The Best Tutors in Town</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-12">
+              <div className="tutors-slide owl-carousel wow fadeInUp" data-wow-delay="250ms">
+
+
+                <div className="single-tutors-slides">
+
+                  <div className="tutor-thumbnail">
+                    <img src="img/bg-img/t1.png" alt="" />
+                  </div>
+
+                  <div className="tutor-information text-center">
+                    <h5>Alex Parker</h5>
+                    <span>Teacher</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
+                    <div className="social-info">
+                      <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className="single-tutors-slides">
+
+                  <div className="tutor-thumbnail">
+                    <img src="img/bg-img/t2.png" alt="" />
+                  </div>
+
+                  <div className="tutor-information text-center">
+                    <h5>Alex Parker</h5>
+                    <span>Teacher</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
+                    <div className="social-info">
+                      <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className="single-tutors-slides">
+
+                  <div className="tutor-thumbnail">
+                    <img src="img/bg-img/t3.png" alt="" />
+                  </div>
+
+                  <div className="tutor-information text-center">
+                    <h5>Alex Parker</h5>
+                    <span>Teacher</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
+                    <div className="social-info">
+                      <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className="single-tutors-slides">
+
+                  <div className="tutor-thumbnail">
+                    <img src="img/bg-img/t4.png" alt="" />
+                  </div>
+
+                  <div className="tutor-information text-center">
+                    <h5>Alex Parker</h5>
+                    <span>Teacher</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
+                    <div className="social-info">
+                      <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className="single-tutors-slides">
+
+                  <div className="tutor-thumbnail">
+                    <img src="img/bg-img/t5.png" alt="" />
+                  </div>
+
+                  <div className="tutor-information text-center">
+                    <h5>Alex Parker</h5>
+                    <span>Teacher</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
+                    <div className="social-info">
+                      <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+                      <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="register-now section-padding-100-0 d-flex justify-content-between align-items-center"
+      // style="background-image: url(img/core-img/texture.png);"
+      >
+
+        <div className="register-contact-form mb-100 wow fadeInUp" data-wow-delay="250ms">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12">
+                <div className="forms">
+                  <h4>Courses For Free</h4>
+                  <form action="#" method="post">
+                    <div className="row">
+                      <div className="col-12 col-lg-6">
+                        <div className="form-group">
+                          <input type="text" className="form-control" id="text" placeholder="Name" />
+                        </div>
+                      </div>
+                      <div className="col-12 col-lg-6">
+                        <div className="form-group">
+                          <input type="email" className="form-control" id="email" placeholder="Email" />
+                        </div>
+                      </div>
+                      <div className="col-12 col-lg-6">
+                        <div className="form-group">
+                          <input type="text" className="form-control" id="phone" placeholder="Phone" />
+                        </div>
+                      </div>
+                      <div className="col-12 col-lg-6">
+                        <div className="form-group">
+                          <input type="text" className="form-control" id="site" placeholder="Site" />
+                        </div>
+                      </div>
+                      <div className="col-12">
+                        <button className="btn clever-btn w-100">Send Message</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="register-now-countdown mb-100 wow fadeInUp" data-wow-delay="500ms">
+          <h3>Register Now</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae. Donec bibendum tortor sed mi faucibus vehicula. Sed erat lorem</p>
+
+          <div className="register-countdown">
+            <div className="events-cd d-flex flex-wrap" data-countdown="2019/03/01"></div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="upcoming-events section-padding-100-0">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-heading">
+                <h3>Upcoming events</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="250ms">
+
+                <div className="events-thumb">
+                  <img src="img/bg-img/e1.jpg" alt="" />
+                  <h6 className="event-date">August 26</h6>
+                  <h4 className="event-title">Networking Day</h4>
+                </div>
+
+                <div className="date-fee d-flex justify-content-between">
+                  <div className="date">
+                    <p><i className="fa fa-clock"></i> August 26 @ 9:00 am</p>
+                  </div>
+                  <div className="events-fee">
+                    <a href="#">$45</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="500ms">
+
+                <div className="events-thumb">
+                  <img src="img/bg-img/e2.jpg" alt="" />
+                  <h6 className="event-date">August 7</h6>
+                  <h4 className="event-title">Open Doors Day</h4>
+                </div>
+
+                <div className="date-fee d-flex justify-content-between">
+                  <div className="date">
+                    <p><i className="fa fa-clock"></i> August 7 @ 9:00 am</p>
+                  </div>
+                  <div className="events-fee">
+                    <a href="#" className="free">Free</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="750ms">
+
+                <div className="events-thumb">
+                  <img src="img/bg-img/e3.jpg" alt="" />
+                  <h6 className="event-date">August 3</h6>
+                  <h4 className="event-title">Creative Leadership</h4>
+                </div>
+
+                <div className="date-fee d-flex justify-content-between">
+                  <div className="date">
+                    <p><i className="fa fa-clock"></i> August 3 @ 9:00 am</p>
+                  </div>
+                  <div className="events-fee">
+                    <a href="#">$45</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="blog-area section-padding-100-0">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-heading">
+                <h3>From Our Blog</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+
+            <div className="col-12 col-md-6">
+              <div className="single-blog-area mb-100 wow fadeInUp" data-wow-delay="250ms">
+                <img src="img/blog-img/1.jpg" alt="" />
+
+                <div className="blog-content">
+                  <a href="#" className="blog-headline">
+                    <h4>English Grammer</h4>
+                  </a>
+                  <div className="meta d-flex align-items-center">
+                    <a href="#">Sarah Parker</a>
+                    <span><i className="fa fa-circle" aria-hidden="true"></i></span>
+                    <a href="#">Art &amp; Design</a>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="col-12 col-md-6">
+              <div className="single-blog-area mb-100 wow fadeInUp" data-wow-delay="500ms">
+                <img src="img/blog-img/2.jpg" alt="" />
+
+                <div className="blog-content">
+                  <a href="#" className="blog-headline">
+                    <h4>English Grammer</h4>
+                  </a>
+                  <div className="meta d-flex align-items-center">
+                    <a href="#">Sarah Parker</a>
+                    <span><i className="fa fa-circle" aria-hidden="true"></i></span>
+                    <a href="#">Art &amp; Design</a>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 
+
+       */}
+      <footer className="footer-area">
+        {/*  */}
+        <div className="top-footer-area">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                {/*  */}
+                <div className="footer-logo">
+                  <a href="index.html"><img src="img/core-img/logo2.png" alt="" /></a>
+                </div>
+                {/*  */}
+                <p>
+                  {/* <a href="#">
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                  </a> */}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*  */}
+        <div className="bottom-footer-area d-flex justify-content-between align-items-center">
+          {/*  */}
+          <div className="contact-info">
+            <a href="#"><span>Phone:</span> +44 300 303 0266</a>
+            <a href="#"><span>Email:</span> info@clever.com</a>
+          </div>
+          {/*  */}
+          <div className="follow-us">
+            <span>Follow us</span>
+            <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </footer>
+      {/*  */}
+
+
+      <Script src="js/jquery/jquery-2.2.4.min.js"></Script>
+
+      <Script src="js/bootstrap/popper.min.js"></Script>
+
+      <Script src="js/bootstrap/bootstrap.min.js"></Script>
+
+      <Script src="js/plugins/plugins.js"></Script>
+
+      <Script src="js/active.js"></Script>
     </StyledPage>
   );
 }

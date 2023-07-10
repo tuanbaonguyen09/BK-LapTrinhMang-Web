@@ -1,4 +1,5 @@
-import './global.css';
+// import './global.css';
+import '../public/scss/style.scss';
 import { StyledComponentsRegistry } from './registry';
 
 export const metadata = {
@@ -13,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning={true} >
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
