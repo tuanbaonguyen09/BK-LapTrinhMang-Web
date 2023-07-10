@@ -1,3 +1,6 @@
 # BK-LapTrinhMang-Web
 Lập trình giao diện website
-[https://bk-lap-trinh-mang-web-rx4u-efhy8ttpr-duytungdeveloper.vercel.app/](https://bk-lap-trinh-mang-web-rx4u-fwosbm77k-duytungdeveloper.vercel.app/)https://bk-lap-trinh-mang-web-rx4u-fwosbm77k-duytungdeveloper.vercel.app/
+
+UI : Vercel [https://bk-lap-trinh-mang-web-rx4u.vercel.app/](https://bk-lap-trinh-mang-web-rx4u.vercel.app/)
+
+BE : cyclic - (Branch : script-deploy-api) [https://busy-rose-quail-hat.cyclic.app/api](https://busy-rose-quail-hat.cyclic.app/api)
