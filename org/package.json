@@ -4,10 +4,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "nx run-many --target=serve",
-    "start": "nx run-many --configuration=production --target=serve",
+    "start": "nx run online-courses-be:serve:production",
     "start:be": "nx run online-courses-be:serve",
     "start:fe": "nx run online-courses:serve",
-    "build": "yarn build:fe && yarn build:be",
+    "build": "yarn build:be && cd dist/apps/online-courses-be && yarn && cd ../../../",
     "prebuild" : "rm -rf dist/apps",
     "build:fe": "nx run online-courses:build:production",
     "build:be": "nx run online-courses-be:build:production"
