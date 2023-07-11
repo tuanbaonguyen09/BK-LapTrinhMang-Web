@@ -431,7 +431,11 @@ textarea:focus {
   width: 100%;
   height: 80px; }
   .clever-main-menu .classy-navbar {
-    height: 80px; }
+    height: 80px; 
+    .nav-brand img{
+      max-width: 80%;
+    }
+  }
   .clever-main-menu .classynav ul li a {
     color: rgba(0, 0, 0, 0.45);
     font-weight: 600; }
@@ -1881,6 +1885,9 @@ textarea:focus {
   .top-footer-area .footer-logo {
     display: block;
     margin-bottom: 15px; }
+  .top-footer-area .footer-logo img{
+      max-width: 25%;
+    }
   .top-footer-area p {
     margin-bottom: 0;
     font-size: 12px;
